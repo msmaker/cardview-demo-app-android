@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import com.msmaker.cardview.R;
 import com.msmaker.cardview.adapter.PostagemAdapter;
@@ -12,6 +13,8 @@ import com.msmaker.cardview.model.Postagem;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.widget.LinearLayout.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,9 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerPostagem = findViewById(R.id.recyclerPostagem);
 
-        //Define layout
+       /* //Define layout Vertical
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerPostagem.setLayoutManager(layoutManager);*/
+
+        //Define layout Horizontal
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(HORIZONTAL);
         recyclerPostagem.setLayoutManager(layoutManager);
+
 
         //define adapter
         this.prepararPostagens();

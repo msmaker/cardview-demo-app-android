@@ -1,6 +1,7 @@
 package com.msmaker.cardview.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,14 +29,18 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerPostagem = findViewById(R.id.recyclerPostagem);
 
-        //Define layout Vertical
+        /*//Define layout Vertical
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerPostagem.setLayoutManager(layoutManager);
-
+*/
         /*//Define layout Horizontal
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(HORIZONTAL);
         recyclerPostagem.setLayoutManager(layoutManager);*/
+
+        //grid layout
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this,2);
+        recyclerPostagem.setLayoutManager(layoutManager);
 
 
         //define adapter
@@ -44,18 +49,18 @@ public class MainActivity extends AppCompatActivity {
         recyclerPostagem.setAdapter(adapter);
     }
 
-    public void prepararPostagens(){
+    public void prepararPostagens() {
 
-        Postagem p = new Postagem("Marco Silva","#tbt Viagem Legal",R.drawable.imagem1);
+        Postagem p = new Postagem("Marco Silva", "#tbt Viagem Legal", R.drawable.imagem1);
         this.postagens.add(p);
 
-        p = new Postagem("Alexandre Silva","#tbt Melhor Viagem",R.drawable.imagem2);
+        p = new Postagem("Alexandre Silva", "#tbt Melhor Viagem", R.drawable.imagem2);
         this.postagens.add(p);
 
-        p = new Postagem("Dayana Belmiro","#tbt Viagem Top",R.drawable.imagem3);
+        p = new Postagem("Dayana Belmiro", "#tbt Viagem Top", R.drawable.imagem3);
         this.postagens.add(p);
 
-        p = new Postagem("Aline Silva","#tbt Viagem Inesquecível",R.drawable.imagem4);
+        p = new Postagem("Aline Silva", "#tbt Viagem Inesquecível", R.drawable.imagem4);
         this.postagens.add(p);
     }
 }

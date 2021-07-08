@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerPostagem = findViewById(R.id.recyclerPostagem);
 
-       /* //Define layout Vertical
+        //Define layout Vertical
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerPostagem.setLayoutManager(layoutManager);*/
+        recyclerPostagem.setLayoutManager(layoutManager);
 
-        //Define layout Horizontal
+        /*//Define layout Horizontal
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(HORIZONTAL);
-        recyclerPostagem.setLayoutManager(layoutManager);
+        recyclerPostagem.setLayoutManager(layoutManager);*/
 
 
         //define adapter
